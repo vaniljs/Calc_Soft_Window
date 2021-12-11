@@ -1,0 +1,402 @@
+$blue: #0D1844
+$gray: #E8E8E8
+
+@font-face
+    font-family: 'Roboto'
+    src: url('../fonts/Roboto-regular.ttf')
+    font-weight: 400
+    font-style: normal
+    font-stretch: normal
+    unicode-range: U+0020-2044
+
+*
+    box-sizing: border-box
+    outline: none
+    font-family: 'Roboto', sans-serif
+    color: #222222
+
+p
+    padding: 0
+    margin: 0
+
+body
+    margin: 0
+    padding: 0
+
+.container
+    padding: 0 70px 0 70px
+
+
+h1
+    font-size: 30px
+    margin: 0 auto 50px auto
+
+
+img
+    user-select: none
+
+.d-flex
+    display: flex
+
+.rc-slider
+    width: 250px
+
+.rc-slider *
+    user-select: none
+
+.rc-slider-step
+    height: 8px
+    border-radius: 25px
+
+.rc-slider-track
+    background-color: $blue
+
+.rc-slider-handle
+    position: relative
+    height: 21px
+    width: 21px
+    background-color: $blue
+    border: none
+    margin-top: -6px
+
+.rc-slider-handle:hover
+    border: none
+
+.rc-slider-handle:active
+    border: none
+    box-shadow: none
+.rc-slider-rail
+    background-color: $gray
+
+.rc-slider-rail, .rc-slider-track
+    border-radius: 20px
+    height: 11px
+
+
+.saaCalc
+    max-width: 1178px
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.leftBlock
+    max-width: 574px
+
+.blockSliders
+    max-width: 436px
+    width: 100%
+    img
+        margin-bottom: 10px
+    > div
+        display: flex
+        justify-content: space-between
+        margin-top: 20px
+        width: 100%
+        .titleRange
+            margin-bottom: 25px
+        p
+            font-size: 15px
+            text-align: left
+            margin-bottom: 9px
+        .price
+            font-size: 18px
+            font-weight: bold
+            margin-bottom: 23px
+
+.inputBlock, .inputDistanceGroup
+    display: flex
+    align-items: center
+    input
+        font-size: 18px
+        border: 1px solid #C4C4C4
+        border-radius: 5px
+        padding: 14px
+        width: 136px
+        margin-right: 10px
+    p
+        margin: 0!important
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button
+        opacity: 1
+
+.titleBlock
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 20px
+
+.typeTapeBlock
+    display: flex
+    flex-wrap: wrap
+    border-bottom: 1px solid #DFDFDF
+    padding-bottom: 20px
+    margin-bottom: 20px
+    *
+        user-select: none
+    .tapeRadio
+        width: 130px
+        cursor: pointer
+        &:not(:last-child)
+            margin-right: 15px
+        img
+            width: 100%
+            margin-bottom: 13px
+        .labelInfo
+            font-size: 12px
+            position: relative
+
+
+.zipperBlock
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    .zipperTitle
+        font-size: 15px
+        margin-right: 30px
+    & .zipperCheckBox
+        font-size: 15px
+        display: flex
+        align-items: center
+        cursor: pointer
+        user-select: none
+        p
+            font-size: 13px
+            margin-right: 40px
+
+
+
+.customCheckbox
+    padding-left: 27px
+    position: relative
+    user-select: none
+    cursor: pointer
+    &:before
+        content: ''
+        display: block
+        width: 18px
+        height: 18px
+        border: 1px solid #C0C0C0
+        border-radius: 2px
+        background-color: #fff
+        position: absolute
+        top: -4px
+        left: 0
+    &.customChecked:after
+        position: absolute
+        left: 5px
+        top: 2px
+        content: ''
+        display: block
+        width: 10px
+        height: 9px
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMSAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNOC43MTI1IDEuMjEyNjFDOC44ODg1OCAxLjA0NDk3IDkuMTIyOSAwLjk1MjI4OSA5LjM2NjAyIDAuOTU0MTI4QzkuNjA5MTQgMC45NTU5NjggOS44NDIwMyAxLjA1MjE4IDEwLjAxNTYgMS4yMjI0N0MxMC4xODkxIDEuMzkyNzUgMTAuMjg5NyAxLjYyMzc5IDEwLjI5NjEgMS44NjY4MkMxMC4zMDI1IDIuMTA5ODYgMTAuMjE0MyAyLjM0NTg5IDEwLjA1IDIuNTI1MTFMNS4wNjI1IDguNzYyNjFDNC45NzY3NCA4Ljg1NDk4IDQuODczMjMgOC45MjkxMSA0Ljc1ODE2IDguOTgwNTZDNC42NDMxIDkuMDMyMDIgNC41MTg4NCA5LjA1OTc0IDQuMzkyODEgOS4wNjIwOEM0LjI2Njc5IDkuMDY0NDEgNC4xNDE1OSA5LjA0MTMxIDQuMDI0NjkgOC45OTQxNUMzLjkwNzggOC45NDY5OSAzLjgwMTYyIDguODc2NzQgMy43MTI1IDguNzg3NjFMMC40MDQ5OTkgNS40ODAxMUMwLjMxMjg5IDUuMzk0MjggMC4yMzkwMTIgNS4yOTA3OCAwLjE4Nzc3MiA1LjE3NTc4QzAuMTM2NTMzIDUuMDYwNzggMC4xMDg5OCA0LjkzNjY0IDAuMTA2NzU5IDQuODEwNzZDMC4xMDQ1MzggNC42ODQ4OCAwLjEyNzY5NCA0LjU1OTg0IDAuMTc0ODQ1IDQuNDQzMTFDMC4yMjE5OTcgNC4zMjYzNyAwLjI5MjE3NyA0LjIyMDMzIDAuMzgxMjAxIDQuMTMxMzFDMC40NzAyMjQgNC4wNDIyOCAwLjU3NjI2NiAzLjk3MjEgMC42OTMwMDIgMy45MjQ5NUMwLjgwOTczNyAzLjg3NzggMC45MzQ3NzMgMy44NTQ2NSAxLjA2MDY1IDMuODU2ODdDMS4xODY1MyAzLjg1OTA5IDEuMzEwNjcgMy44ODY2NCAxLjQyNTY3IDMuOTM3ODhDMS41NDA2NyAzLjk4OTEyIDEuNjQ0MTcgNC4wNjMgMS43MyA0LjE1NTExTDQuMzQ3NSA2Ljc3MTM2TDguNjg4NzUgMS4yNDAxMUM4LjY5NjU2IDEuMjMwNDggOC43MDQ5MSAxLjIyMTMgOC43MTM3NSAxLjIxMjYxSDguNzEyNVoiIGZpbGw9IiNGMjcyMTciLz4NCjwvc3ZnPg==")
+        background-repeat: no-repeat
+        background-position: center
+
+
+.blockSliders
+    max-width: 450px
+    img
+        width: 100%
+
+.mountBlock
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    border-bottom: 1px solid #DFDFDF
+    padding-bottom: 20px
+    margin-bottom: 20px
+    font-size: 13px
+    text-align: center
+    *
+        user-select: none
+    &>div
+        cursor: pointer
+        width: 100px
+    img
+        width: 100px
+        border-radius: 50%
+        margin-bottom: 10px
+        border: 3px solid transparent
+    .checked
+        img
+            border: 3px solid #F27217
+
+
+.colorBlock
+    display: flex
+    flex-wrap: wrap
+    border-bottom: 1px solid #DFDFDF
+    padding-bottom: 20px
+    margin-bottom: 20px
+    *
+        user-select: none
+    &>div
+        position: relative
+        display: flex
+        justify-content: center
+        margin-right: 10px
+        width: 54px
+        height: 54px
+        border: 2px solid #D8D8D8
+        border-radius: 5px
+        cursor: pointer
+        &.checked
+            border: 2px solid #F27217
+            position: relative
+            &:after
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTkuNDcyIDAuOTM5ODY4QzE5LjYwODUgMC44MDA2IDE5Ljc3MTQgMC42ODk5NjMgMTkuOTUxMiAwLjYxNDQzM0MyMC4xMzA5IDAuNTM4OTA0IDIwLjMyNCAwLjUgMjAuNTE5IDAuNUMyMC43MTQgMC41IDIwLjkwNyAwLjUzODkwNCAyMS4wODY4IDAuNjE0NDMzQzIxLjI2NjYgMC42ODk5NjMgMjEuNDI5NSAwLjgwMDYgMjEuNTY2IDAuOTM5ODY4QzIyLjEzOCAxLjUxNzg3IDIyLjE0NiAyLjQ1MTg3IDIxLjU4NiAzLjAzOTg3TDkuNzU5OTkgMTcuMDE5OUM5LjYyNTcyIDE3LjE2NzMgOS40NjI3OSAxNy4yODU4IDkuMjgxMTUgMTcuMzY4MUM5LjA5OTUxIDE3LjQ1MDQgOC45MDI5OSAxNy40OTQ4IDguNzAzNiAxNy40OTg1QzguNTA0MjIgMTcuNTAyMyA4LjMwNjE3IDE3LjQ2NTMgOC4xMjE1NyAxNy4zODk5QzcuOTM2OTcgMTcuMzE0NSA3Ljc2OTcgMTcuMjAyMiA3LjYyOTk5IDE3LjA1OTlMMC40MzM5OTEgOS43Njc4N0MwLjE1NjQ2NSA5LjQ4NDg0IDAuMDAxMDA3MDggOS4xMDQyNiAwLjAwMTAwNzA4IDguNzA3ODdDMC4wMDEwMDcwOCA4LjMxMTQ4IDAuMTU2NDY1IDcuOTMwOSAwLjQzMzk5MSA3LjY0Nzg3QzAuNTcwNDgzIDcuNTA4NiAwLjczMzM4OCA3LjM5Nzk2IDAuOTEzMTY4IDcuMzIyNDNDMS4wOTI5NSA3LjI0NjkgMS4yODU5OSA3LjIwOCAxLjQ4MDk5IDcuMjA4QzEuNjc1OTkgNy4yMDggMS44NjkwMyA3LjI0NjkgMi4wNDg4MSA3LjMyMjQzQzIuMjI4NTkgNy4zOTc5NiAyLjM5MTUgNy41MDg2IDIuNTI3OTkgNy42NDc4N0w4LjYzMTk5IDEzLjgzMzlMMTkuNDMyIDAuOTgzODY4QzE5LjQ0NDQgMC45Njg0MTIgMTkuNDU3OCAwLjk1MzcxOCAxOS40NzIgMC45Mzk4NjhaIiBmaWxsPSIjRjI3MjE3Ii8+DQo8L3N2Zz4=")
+                background-repeat: no-repeat
+                background-position: center
+        &.boxBrown
+            background-color: #423225
+        &.boxGray
+            background-color: #AAABAD
+        &.boxBeige
+            background-color: #E0D2B8
+        &.boxGreen
+            background-color: #153D32
+        &.boxBlue
+            background-color: #1A407E
+        &.boxRed
+            background-color: #4F1D28
+        .labelInfo
+            position: absolute
+            display: block
+            top: -20px
+            font-size: 13px
+            background-color: #fff
+            padding: 7px 15px
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18)
+            border-radius: 3px
+            z-index: 1
+
+
+.blockResult
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    text-align: center
+    width: 680px
+.cardResult
+    border: 1px solid #EEEEEE
+    padding: 24px
+    font-family: 'Neometric',sans-serif
+    width: 338px
+    .cardTitle
+        font-weight: bold
+        font-size: 16px
+        margin-bottom: 15px
+        span
+            color: $blue
+    .resultColumn
+        display: flex
+        align-items: end
+        justify-content: center
+        .onInvoice
+            width: 110px
+            margin-right: 5px
+            .invoiceColumn
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 108px
+                background: linear-gradient(180deg, #2C65E1 0%, #124DCB 100%)
+                font-size: 14px
+                color: #fff
+                letter-spacing: 1px
+                margin-bottom: 7px
+            .invoiceTitle
+                text-transform: uppercase
+                font-size: 10px
+                color: #777
+                font-weight: bold
+
+        .profit
+            width: 110px
+            .profitColumn
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 67px
+                background: linear-gradient(180deg, #585656 0%, #333333 100%)
+                font-size: 14px
+                color: #fff
+                letter-spacing: 1px
+                margin-bottom: 7px
+            .profitTitle
+                text-transform: uppercase
+                font-size: 10px
+                color: #777
+                font-weight: bold
+
+
+.resultBlock
+    background-color: #F6F6F6
+    padding: 35px 65px
+    width: 100%
+    button
+        background-color: #F27217
+        padding: 25px 65px
+        border: none
+        border-radius: 5px
+        font-size: 18px
+        color: #fff
+        cursor: pointer
+    .priceBlock
+        width: 100%
+        max-width: 500px
+    .priceResult
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 18px
+        font-weight: 500
+        margin-bottom: 30px
+        span
+            font-size: 26px
+            font-weight: bold
+
+    form
+        display: flex
+        align-self: center
+        margin-top: 15px
+        button
+            border-radius: 0 5px 5px 0
+    input[name='email']
+        padding: 20px 23px
+        font-size: 15px
+        border: 1px solid #CCCCCC
+        border-radius: 5px 0 0 5px
+        width: 100%
+.deliveryBlock
+    max-width: 570px
+    width: 100%
+    .deliveryList
+        align-items: center
+        height: 51px
+    .deliveryList>div:not(:first-child)
+        margin-left: 15px
+    .deliveryList>div
+        padding-left: 25px
+        font-size: 13px
+    .inputDistanceGroup
+
+        padding-left: 0!important
+        input
+            width: 92px
+
+
+
+@media (max-width: 991px)
+    .blockSliders
+        max-width: 100%
+        margin-right: 0
+        margin-bottom: 50px
+    .cardResult
+        width: 100%
+
