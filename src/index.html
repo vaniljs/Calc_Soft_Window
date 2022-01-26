@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://vaniljs.github.io/scripts/reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Калькулятор мягких окон</h1>
     <div class="calcSoftWindow"></div>
     <script src="script.js"></script>
+
+<!--    <link rel="stylesheet" href="https://qeru.ru/works/soft_window/style.css">-->
+<!--    <script src="https://qeru.ru/works/soft_window/script.js"></script>-->
+
+
+    fetch(location.origin + '/wp-json/wp/v2/pages/' + document.querySelector('postid').innerHTML).then(function (response) {
+    <postid>4985</postid>
 </body>
 </html>

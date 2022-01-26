@@ -26,8 +26,6 @@ const ColorsCant = (props) => {
                     <p>{title}</p>
                 </div>
             }
-
-
         </div>
     )
 }
